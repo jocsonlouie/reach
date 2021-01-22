@@ -2,32 +2,51 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width='device-width', initial-scale=1.0">
+    <link rel="manifest" href="manifest.json">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=yes">
+    <meta name="theme-color"  content="#FFDE59">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="apple-touch-icon" href="icons/apple-icon-180.png">
+    <link rel="stylesheet" href="/css/index.css">
     <title>REACH (Reconnecting Efforts to Assist and Care for Help)</title>
-    <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
-    <script src="https://fustyles.github.io/webduino/Instascan.js/instascan.min_esp32-cam.js"></script>   
+
     <link rel="manifest" href="manifest.json">
 </head>
 <body>
-    <h1>hellsasdo</h1>
+    <nav>
+        <img src="images/main-logo.png" alt="reach logo" class="logo">
+    </nav>
 
+    <section id="hero-section">
+        <div class="container">
+            <img src="images/circle.png" alt="design" class="design cblue">
+            <img src="images/circlered.png" alt="design"  class="design cred">
+            <img src="images/cross.png" alt="design" class="design xred"> 
+            <img src="images/dots.svg" alt="design" class="design dotsred">
+            <img src="images/dotsblue.svg" alt="design" class="design dotsblue">
+            <img src="images/polygon.png" alt="design" class="design pblue">
+            <img src="images/x.png" alt="design" class="design xblue">
+        </div>
+    
+        <div class="container">
+                <h1 class="welcome">Welcome!</h1>
+            <div class="box-container">
+                <h3 class="consent">DATA PRIVACY CONSENT</h3>
+                <p>I authorize and give my consent to REACH to collect, store, transmit, use, distribute, disclose, share, retain, dispose, destroy, and process my Personal Information and/or Sensitive Personal Information contained in my customer record form or any other form or document that I have or will submit to REACH, whether manually or electronically, pursuant to my banking relationship with it, for any of the following purposes prescribed by the Data Privacy Act of 2012 and its Implementing Rules and Regulation.</p>
+            </div>
+            <input type="checkbox" class="checkbox-agree" id="agreement" value="agree" name="agreement">
+            <label for="agreement" class="terms">Accept terms and conditions.</label>    
+            <a href="html/homepage.html"> <button class="btn-consent">ACCEPT CONSENT </button> </a>
+        </div>  
+    </section>
 
-     <video id="preview"></video>
-
-     <script type="text/javascript">
-        let scanner = new Instascan.Scanner({ video: document.getElementById('preview') });
-        scanner.addListener('scan', function (content) {
-          console.log(content);
-        });
-        Instascan.Camera.getCameras().then(function (cameras) {
-          if (cameras.length > 0) {
-            scanner.start(cameras[0]);
-          } else {
-            console.error('No cameras found.');
-          }
-        }).catch(function (e) {
-          console.error(e);
-        });
-      </script>
+    <script>
+        if('serviceWorker' in navigator){
+            navigator.serviceWorker.register('/service-worker.js');
+        }
+    </script>
 </body>
 </html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="manifest" href="../manifest.json">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=yes">
+    <meta name="theme-color"  content="#FFDE59">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="apple-touch-icon" href="icons/apple-icon-180.png">
+    <link rel="stylesheet" href="../css/index.css">
+    <title>REACH (Reconnecting Efforts to Assist and Care for Help)</title>
+
+    <link rel="manifest" href="manifest.json">
+</head>
+<body>
+    <nav>
+        <img src="../images/main-logo.png" alt="reach logo" class="logo">
+    </nav>
+
+    <section id="hero-section">
+        <div class="container">
+            <img src="../images/dots.svg" alt="design" class="design dotsredv2">
+            <img src="../images/dotsblue.svg" alt="design" class="design dotsbluev2">
+        </div>
+        <div class="container">
+            <h1 class="welcome">Are you currently inside the mall? </h1>
+
+            <div class="box-wrapper">
+                <a href="dashboard.html">
+                    <div class="blue-box-container">
+                            <div class="blue-content">
+                                <div class="blue-img">
+                                    <img src="../images/blue-location.png" alt="location icon" class="blue-location">
+                                </div>
+                                <div class="blue-text">
+                                    <h2 class="blue-heading">YES, I AM!👋🏻 </h2>
+                                    <p>Tap here to get started if you’re currently on-site.</p>
+                                </div>
+                            </div>
+                    
+                    </div>
+                </a>
+                <a href="onlineinquiry.html">
+                    <div class="red-box-container">
+                        <div class="red-content">
+                            <div class="red-img">
+                                <img src="../images/red-wifi.png" alt="wifi icon" class="red-location">
+                            </div>
+                            <div class="red-text">
+                                <h2 class="red-heading">NO, BUT I WILL ACCESS ONLINE! 📲</h2>
+                                <p>Tap here to get started if you want online inquiry.</p>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        if('serviceWorker' in navigator){
+            navigator.serviceWorker.register('/service-worker.js');
+        }
+    </script>
+</body>
+</html>

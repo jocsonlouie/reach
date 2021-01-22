@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="manifest" href="../manifest.json">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=yes">
+    <meta name="theme-color"  content="#FFDE59">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="apple-touch-icon" href="icons/apple-icon-180.png">
+    <link rel="stylesheet" href="../css/index.css">
+    <title>REACH (Reconnecting Efforts to Assist and Care for Help)</title>
+
+    <link rel="manifest" href="manifest.json">
+</head>
+<body>
+    <a href="homepage.html">
+        <div class="container">
+            <div class="nav-back">
+                <img src="../images/arrow-left.png" alt="reach logo" class="logo-bac">
+            </div>
+        </div>
+    </a>
+    
+    <div class="container">
+        <nav class="nav-dashboard">
+            <div class="nav-img">
+                <img src="../images/main-logo.png" alt="reach logo" class="logo-nav">
+            </div>
+            <div class="nav-title">
+                <h1 class="option">REACH</h1>
+            </div>
+        </nav>  
+    </div>
+    
+
+    <section id="hero-section">
+        <div class="container">
+            <img src="../images/emergency-big.png" alt="reach logo" class="logo">
+            <h1 class="help">EMERGENCY </h1>
+
+            <div class="option-container">
+
+                <div class="option-wrapper">
+                    <a href="/html/chat.html">
+                        <div class="customer-service-container">
+                            <div class="customer-service-icon">
+                                <img src="../images/rincident.png" alt="customer-service-icon" class="cs-img">
+
+                            </div>
+                            <div class="customer-service-title">
+                                <h1 class="cs-title margin">Report an<br> Incident</h1>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="option-wrapper">
+                    <a href="/html/chat.html">
+                        <div class="place-locator-container">
+                            <div class="customer-service-icon">
+                                <img src="../images/plocator.png" alt="customer-service-icon" class="cs-img">
+                            </div>
+                            <div class="customer-service-title">
+                                <h1 class="cs-title">Emergency <br> Locator</h1>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                
+                <div class="option-wrapper">
+                    <a href="/html/chat.html">
+                        <div class="lost-found-container">
+                            <div class="customer-service-icon">
+                                <img src="../images/lfound.png" alt="customer-service-icon" class="cs-img">
+                            </div>
+                            <div class="customer-service-title">
+                                <h1 class="cs-title">Lost & <br>Found</h1>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="option-wrapper">
+                    <a href="/html/chat.html">
+                        <div class="give-feedback-container">
+                            <div class="customer-service-icon">
+                                <img src="../images/gfeedback.png" alt="customer-service-icon" class="cs-img">
+
+                            </div>
+                            <div class="customer-service-title">
+                                <h1 class="cs-title">Give <br> Feedback</h1>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <script>
+        if('serviceWorker' in navigator){
+            navigator.serviceWorker.register('/service-worker.js');
+        }
+    </script>
+</body>
+</html>
